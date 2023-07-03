@@ -53,6 +53,10 @@ ALTER 거의 쓸일 없음
                 ALTER TABLE 자식테이블명ADD CONSTRAINT 제약조건명 FOREIGN KEY(칼럼) REFERENCES 부모테이블(참조할 칼럼)
             (2) 삭제
                 ALTER TABLE 테이블명 DROP CONSTRAINT 제약조건명
+            (3) 일시중지
+                ALTER TABLE 테이블명 DISABLE CONSTRAINT 제약조건명
+            (4) 활성화
+                ALTER TABLE 테이블명 ENABLE CONSTRAINT 제약조건명
 */
 
 --실습.
