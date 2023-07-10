@@ -23,6 +23,15 @@ SELECT *
     4. 인덱스가 많으면 데이터의 삽입/수정/삭제 시 인덱스도 함께 갱신해야 하기 때문에 전체적인 성능이 떨어질 수 있다.
  */
  
+ -- 인덱스를 타는 조회
+SELECT *
+  FROM EMPLOYEES
+ WHERE EMPLOYEE_ID = 150;
+ 
+-- 인덱스를 안 타는 조회 (인덱스 칼럼을 그대로 사용하지 않고 함수를 적용해 사용하면 인덱스를 타지 않는다.)
+SELECT *
+  FROM EMPLOYEES
+ WHERE TO_CHAR(EMPLOYEE_ID) = '150';
 
 /*
     데이터 사전
